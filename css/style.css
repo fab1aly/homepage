@@ -26,8 +26,8 @@ body {
 }
 
 header {
+    /* display: none; */
 
-    display: none;
     border: solid 1px darkgray;
 
     nav {}
@@ -93,8 +93,13 @@ main {
 
     display: flex;
     flex-direction: column;
+}
 
-
+#home,
+#about,
+#project,
+#contact {
+    display: none;
 }
 
 footer {
@@ -116,7 +121,7 @@ footer {
         }
     }
 
-    & .footer-link {
+    & .footer-social-link {
         margin: 0;
         padding: 0;
 
@@ -135,7 +140,7 @@ footer {
             margin-right: .1rem;
         }
 
-        & .footer-link:hover {
+        & .footer-linkedin:hover {
             & .fa-linkedin {
                 color: dodgerblue;
 
@@ -146,7 +151,7 @@ footer {
             }
         }
 
-        & .footer-git:hover {
+        & .footer-github:hover {
             & .fa-square-github {
                 color: orange;
             }
