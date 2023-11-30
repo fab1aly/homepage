@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "Atkinson-Hyperlegible";
+    src: url('font/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2');
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: Atkinson-Hyperlegible, sans-serif;
+    color: darkgray;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: black;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100%;
+
+}
+
+header {
+
+    display: none;
+    border: solid 1px darkgray;
+
+    nav {}
+
+    /* & nav {
+        margin: 25px;
+        background: #f9f9f9;
+        padding: 16px;
+
+        & .menuItems {
+            list-style: none;
+            display: flex;
+
+            & li {
+                margin: 50px;
+
+                & a {
+                    text-decoration: none;
+                    color: #8f8f8f;
+                    font-size: 24px;
+                    font-weight: 400;
+                    transition: all 0.5s ease-in-out;
+                    position: relative;
+                    text-transform: uppercase;
+
+                    &::before {
+                        content: attr(data-item);
+                        transition: 0.5s;
+                        color: #8254ff;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        width: 0;
+                        overflow: hidden;
+                    }
+
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                            transition: all 0.5s ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    } */
+}
+
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+
+    border: solid 1px darkgray;
+
+    margin: 2rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+footer {
+    /* display: none; */
+    font-size: 14px;
+
+    & .copyleft {
+
+        position: absolute;
+        bottom: 0.5rem;
+        right: 2.5rem;
+
+        display: inline-block;
+        transform: rotate(180deg);
+
+        & .copyleft-logo {
+            display: inline-block;
+            transform: rotate(180deg) translateY(1px);
+        }
+    }
+
+    & .footer-link {
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        bottom: 8.5rem;
+        right: -6.2rem;
+
+        display: flex;
+        transform: rotate(90deg);
+
+        & li {
+            margin-right: 1rem;
+        }
+
+        & .fa-brands {
+            margin-right: .1rem;
+        }
+
+        & .footer-link:hover {
+            & .fa-linkedin {
+                color: dodgerblue;
+
+            }
+
+            & span {
+                color: lightgray;
+            }
+        }
+
+        & .footer-git:hover {
+            & .fa-square-github {
+                color: orange;
+            }
+
+            & span {
+                color: lightgray;
+            }
+        }
+    }
+}
