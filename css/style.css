@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "Atkinson-Hyperlegible";
-    src: url('font/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2');
-}
+@import url(fonts/Atkinson-Hyperlegible.css);
 
 :root {
     font-size: 62.5%;
@@ -17,20 +14,36 @@
 body {
     font-size: 1.6rem;
     background-color: black;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    height: 100%;
-
 }
 
 header {
     /* display: none; */
 
-    border: solid 1px darkgray;
+    & nav {
 
-    nav {}
+        position: absolute;
+        top: 4rem;
+        left: 5rem;
+        z-index: 10;
+
+        font-weight: bold;
+
+        & ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        & li {
+            padding: .5rem 0;
+        }
+
+        & li:hover {
+            color: lightgray;
+
+            animation-name: link-animation;
+            animation-duration: .3s;
+        }
+    }
 
     /* & nav {
         margin: 25px;
@@ -78,6 +91,16 @@ header {
     } */
 }
 
+@keyframes link-animation {
+    from {
+        color: darkgray;
+    }
+
+    to {
+        color: lightgray;
+    }
+}
+
 main {
     position: absolute;
     top: 0;
@@ -91,20 +114,156 @@ main {
     margin: 2rem;
     padding: 1rem;
 
-    display: flex;
-    flex-direction: column;
 }
 
-#home,
-#about,
-#project,
+#home {
+    /* display: none; */
+
+    & h1,
+    & p {
+        margin: 0;
+    }
+
+    & p {
+        text-align: right;
+        margin-right: .5rem;
+    }
+
+    & section {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        transform: scale(100%);
+
+        /* animation-name: home-animation; */
+        animation-duration: 1s;
+        animation-delay: 3s;
+    }
+}
+
+@keyframes home-animation {
+    from {
+        top: 50%;
+        right: 20%;
+        transform: scale(150%);
+    }
+
+    to {
+        top: 5%;
+        right: 5%;
+        transform: scale(100%);
+    }
+}
+
+#about {
+    display: none;
+
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    width: 15rem;
+
+    & p {
+        margin: 0;
+        text-align: right;
+        font-size: 1.4rem;
+    }
+}
+
+#project {
+    display: none;
+
+    height: 100%;
+    width: 100%;
+
+    /* display: flex; */
+    justify-content: center;
+
+    & iframe {
+        border: solid 1px darkgray;
+        margin: 0 auto;
+        margin-top: 13rem;
+
+        width: 100%;
+        height: 65%;
+    }
+
+    & h2,
+    & p {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    & h2 {
+        & span {
+            font-size: 1.4rem;
+            font-weight: normal;
+        }
+    }
+
+    & p {
+        font-size: 1.2rem;
+
+        /* & strong {
+            font-weight: bold;
+        } */
+    }
+}
+
 #contact {
     display: none;
+
+    height: 100%;
+    width: 100%;
+
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+
+    & ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    & li {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: .1rem 0;
+    }
+
+    & .fa-arrow-up-right-from-square {
+        transform: scale(80%);
+    }
+
+    & a:hover {
+
+        & span,
+        & i {
+            color: gray;
+
+            animation-name: contact-animation;
+            animation-duration: .3s;
+        }
+
+    }
 }
 
+@keyframes contact-animation {
+    from {
+        color: darkgray;
+    }
+
+    to {
+        color: gray;
+    }
+}
+
+
+/*************************************************/
 footer {
-    /* display: none; */
     font-size: 14px;
+    font-weight: bold;
 
     & .copyleft {
 
