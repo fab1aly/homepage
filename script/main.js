@@ -30,7 +30,7 @@ function displayAbout() {
     contact_link.textContent = "Contact";
 
     const about_article = document.querySelector('#about');
-    about_article.style.display = "block";
+    about_article.style.display = "flex";
     const project_article = document.querySelector('#project');
     project_article.style.display = "none";
     const contact_article = document.querySelector('#contact');
