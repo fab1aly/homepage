@@ -14,6 +14,12 @@
 body {
     font-size: 1.6rem;
     background-color: black;
+
+    /* animation-name: opacity-on; */
+    animation-duration: 1s;
+    animation-delay: 2s;
+
+    opacity: 1;
 }
 
 header {
@@ -120,6 +126,19 @@ main {
 /*********************************************************/
 #home {
     /* display: none; */
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transform: scale(100%);
+
+    /* animation-name: home-animation; */
+    animation-duration: 1s;
+    animation-delay: 3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
 
     & h1,
     & p {
@@ -131,16 +150,9 @@ main {
         margin-right: .5rem;
     }
 
-    & section {
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        transform: scale(100%);
 
-        /* animation-name: home-animation; */
-        animation-duration: 1s;
-        animation-delay: 3s;
-    }
+
+
 }
 
 @keyframes home-animation {
@@ -167,13 +179,13 @@ main {
     height: 100%;
     width: 100%;
 
-    animation-name: article-beginning;
-    animation-duration: 2s;
+    animation-name: opacity-on;
+    animation-duration: 1s;
 
     opacity: 1;
 }
 
-@keyframes article-beginning {
+@keyframes opacity-on {
     from {
         opacity: 0;
     }
@@ -184,9 +196,14 @@ main {
 }
 
 #about {
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+
+    & h2 {
+        margin: 0;
+    }
 
     & p {
         width: 15rem;
@@ -233,15 +250,24 @@ main {
 
 #contact {
     /* display: flex; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    & h2 {
+        transform: translateX(-22px);
+    }
 
     & ul {
         margin: 0;
         padding: 0;
     }
 
-    & li {
+    & li:first-child {
+        margin-bottom: 1rem;
+    }
+
+    & a {
         font-size: 1.4rem;
         font-weight: bold;
         margin: .1rem 0;
