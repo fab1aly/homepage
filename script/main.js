@@ -136,7 +136,8 @@ class PChat extends HTMLElement {
         // créer l'élément
         super();
 
-        this.delay = this.getAttribute('delay')
+        this.delay = this.getAttribute('delay') || 1000;
+        this.tick = this.getAttribute('tick')
 
         this.text = this.textContent
         // console.log(this.text);
