@@ -24,7 +24,7 @@
 // // }
 const element = document.querySelector('#about p');
 const text = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, sequi, cupiditate deleniti temporibus ratione placeat autem fugiat nihil voluptatum nesciunt architecto.\nVitae saepe dolores earum dignissimos impedit numquam quas asperiores! Expedita vel commodi eos magnam nemo pariatur ?";
-// document.addEventListener('DOMContentLoaded', () => {
+
 // const element = document.querySelector('#home p');
 // const text = "Web developer";
 let memo = "";
@@ -37,16 +37,14 @@ function typeLetter() {
         if (time % 5 == 0) {
             memo += text[index++];
             element.textContent = memo;
-            // Utilise requestAnimationFrame pour la prochaine lettre
+
         }
-        requestAnimationFrame(typeLetter);
+        requestAnimationFrame(typeLetter);// Utilise requestAnimationFrame pour la prochaine lettre
     }
 }
 
 // Commence l'effet de frappe après un délai initial
-setTimeout(() => requestAnimationFrame(typeLetter), 1000);
-// })
-
+// setTimeout(() => requestAnimationFrame(typeLetter), 2000);
 
 
 
@@ -127,3 +125,77 @@ function displayContact() {
     const contact_article = document.querySelector('#contact');
     contact_article.style.display = "flex";
 }
+
+
+/***************************************************************************** */
+
+
+class PChat extends HTMLElement {
+    constructor() {
+        // super();
+        // créer l'élément
+        super();
+
+        this.delay = this.getAttribute('delay')
+
+        this.text = this.textContent
+        // console.log(this.text);
+
+        this.textContent = ``;
+    }
+
+    connectedCallback() {
+
+        // le navigateur appelle cette méthode lorsque l'élément est ajouté au document
+        // elle peut-être appelé autant de fois que lélément est ajouté ou supprimé)
+        // this.text = this.textContent;
+
+        // console.log("test2");
+        let memo = "";
+        let index = 0;
+        let time = 0;
+        let text = this.text
+        let self = this
+
+        function typeLetter() {
+            if (index < text.length) {
+                time++
+                if (time % 5 == 0) {
+                    memo += text[index++];
+                    self.textContent = memo;
+
+                }
+                requestAnimationFrame(typeLetter);// Utilise requestAnimationFrame pour la prochaine lettre
+            }
+        }
+
+        // Commence l'effet de frappe après un délai initial
+        setTimeout(() => requestAnimationFrame(typeLetter), this.delay);
+
+    }
+
+    disconnectedCallback() {
+        // le navigateur appelle cette méthode lorsque l'élément est supprimé du document
+        // elle peut-être appelé autant de fois que lélément est ajouté ou supprimé)
+        this.textContent = ``;
+    }
+
+    // static get observedAttributes() {
+    //     return [/* tableau listant les attributs dont les changements sont à surveiller */];
+    // }
+
+    // attributeChangedCallback(name, oldValue, newValue) {
+    //     // appelé lorsque l'un des attributs listé par la méthode ci-dessus est modifié
+    // }
+
+    // adoptedCallback() {
+    //     // méthode appelé lorsque l'élément est envoyé vers un nouveau document
+    //     // (utilisé très rarement avec document.adoptNode)
+    // }
+
+    // vous pouvez ajouter d'autres méthodes ou propriétées
+}
+document.addEventListener('DOMContentLoaded', () => {
+    // let the browser know that <my-element> is served by our new class
+    customElements.define("p-chat", PChat);
+})
