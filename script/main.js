@@ -132,14 +132,13 @@ function displayContact() {
 
 class PChat extends HTMLElement {
     constructor() {
-        // super();
-        // créer l'élément
         super();
+        // créer l'élément
 
         this.delay = this.getAttribute('delay') || 1000;
         this.tick = this.getAttribute('tick')
 
-        this.text = this.textContent
+        this.text = this.innerHTML
         // console.log(this.text);
 
         this.textContent = ``;
@@ -163,7 +162,7 @@ class PChat extends HTMLElement {
                 time++
                 if (time % 5 == 0) {
                     memo += text[index++];
-                    self.textContent = memo;
+                    self.innerHTML = memo;
 
                 }
                 requestAnimationFrame(typeLetter);// Utilise requestAnimationFrame pour la prochaine lettre
@@ -196,7 +195,7 @@ class PChat extends HTMLElement {
 
     // vous pouvez ajouter d'autres méthodes ou propriétées
 }
-document.addEventListener('DOMContentLoaded', () => {
-    // let the browser know that <my-element> is served by our new class
-    customElements.define("p-chat", PChat);
-})
+
+// let the browser know that <my-element> is served by our new class
+customElements.define("p-chat", PChat);
+
