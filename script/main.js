@@ -2,8 +2,6 @@
 
 function displayAbout() {
 
-    // const home_link = document.querySelector('.nav-home');
-    // home_link.textContent = "Home";
     const about_link = document.querySelector('.nav-about');
     about_link.innerHTML = "&#x25CF;";
     const project_link = document.querySelector('.nav-project');
@@ -21,8 +19,6 @@ function displayAbout() {
 
 function displayProject() {
 
-    // const home_link = document.querySelector('.nav-home');
-    // home_link.textContent = "Home";
     const about_link = document.querySelector('.nav-about');
     about_link.textContent = "About";
     const project_link = document.querySelector('.nav-project');
@@ -40,8 +36,6 @@ function displayProject() {
 
 function displayContact() {
 
-    // const home_link = document.querySelector('.nav-home');
-    // home_link.textContent = "Home";
     const about_link = document.querySelector('.nav-about');
     about_link.textContent = "About";
     const project_link = document.querySelector('.nav-project');
