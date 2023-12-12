@@ -143,9 +143,6 @@ main {
         margin-right: .5rem;
     }
 
-
-
-
 }
 
 @keyframes home-animation {
@@ -252,44 +249,22 @@ main {
             color: gray;
             transform: translateX(-1px);
         }
+
+        .fa-arrow-up-right-from-square {
+            transform: scale(80%);
+        }
+    }
+
+    #enRoute h3::before{
+        content: "🇫🇷 ";
+        font-size: 1rem;
     }
 
     iframe {
-        transform: scale(90%);
+        transform: scale(95%);
         width: 99%;
-        height: 50rem;
+        height: 60vh;
     }
-
-
-    /* & iframe {
-        border: solid 1px darkgray;
-        margin: 0 auto;
-        margin-top: 13rem;
-
-        width: 100%;
-        height: 65%;
-    }
-
-    & h2,
-    & p {
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    & h2 {
-        & span {
-            font-size: 1.4rem;
-            font-weight: normal;
-        }
-    }
-
-    & p {
-        font-size: 1.2rem;
-
-        & strong {
-            font-weight: bold;
-        }
-    } */
 
 }
 
