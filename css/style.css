@@ -41,13 +41,13 @@ header {
 
         & li {
             padding: .5rem 0;
+
+            color: darkgray;
+            transition: all 0.2s ease-in-out;
         }
 
         & li:hover {
             color: lightgray;
-
-            animation-name: link-animation;
-            animation-duration: .3s;
         }
     }
 
@@ -97,15 +97,6 @@ header {
     } */
 }
 
-@keyframes link-animation {
-    from {
-        color: darkgray;
-    }
-
-    to {
-        color: lightgray;
-    }
-}
 
 /*********************************************************/
 main {
@@ -170,7 +161,7 @@ main {
 }
 
 /*********************************************************/
-/* #home, */
+
 #about,
 #project,
 #contact {
@@ -203,6 +194,7 @@ main {
 
     & h2 {
         margin: 0;
+
     }
 
     & type-chat {
@@ -267,36 +259,31 @@ main {
         margin-bottom: 1rem;
     }
 
-    & a {
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin: .1rem 0;
-    }
-
     & .fa-arrow-up-right-from-square {
         transform: scale(80%);
     }
 
+    & a {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: .1rem 0;
+
+        & span,
+        & i {
+            color: darkgray;
+
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    /* & a:focus, */
     & a:hover {
 
         & span,
         & i {
             color: gray;
-
-            animation-name: contact-animation;
-            animation-duration: .3s;
         }
 
-    }
-}
-
-@keyframes contact-animation {
-    from {
-        color: darkgray;
-    }
-
-    to {
-        color: gray;
     }
 }
 

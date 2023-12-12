@@ -6,7 +6,7 @@ export class TypeChat extends HTMLElement {
         // créer l'élément
 
         this.delay = this.getAttribute('delay') || 1000;  // 1000ms par défaut
-        // this.tick = this.getAttribute('tick'); //?? maybe tick config ??
+        this.tick = this.getAttribute('tick') || 5; //?? maybe tick config ??
 
         this.text = this.innerHTML;
         // console.log(this.text);
@@ -18,27 +18,28 @@ export class TypeChat extends HTMLElement {
         // elle peut-être appelé autant de fois que lélément est ajouté ou supprimé)
         // this.text = this.textContent;
 
-        let self = this;
+        const self = this;
+        const text = this.text;
+        
         let index = 0;
         let frame = 0;
-        let text = this.text;
         let cache = "";
-        let out_of_Bracket = true;
+        let out_of_bracket = true;
 
         function typeLetter() {
             if (index < text.length) {
                 frame++;
 
-                if (frame % 5 == 0) {
+                if (frame % self.tick == 0) {
                     cache += text[index++];
 
                     if (text[index] == "<") {
-                        out_of_Bracket = false;
+                        out_of_bracket = false;
                     }
                     if (text[index] == ">") {
-                        out_of_Bracket = true;
+                        out_of_bracket = true;
                     }
-                    if (out_of_Bracket) {
+                    if (out_of_bracket) {
                         self.innerHTML = cache;
                     }
 
