@@ -79,25 +79,28 @@
                     <summary>
                         <h3>TypeChat</h3>
                     </summary>
+                    <div>
+                        
+                        <fieldset>
+                            <legend>Test this web component with your HTML text :</legend>
 
-                    <fieldset>
-                        <legend>Test this web component with your HTML text :</legend>
+                            <span>&lt;type-chat&gt;</span>
+                            <textarea name="text" rows="5" spellcheck="false"><b>About this</b><br>
+This is my first web component.<br>
+I really like to make it and learn how use it.<br>
+It's fun, simple and create for the future of web developement !<br>
+Why should not begin to use it ?</textarea>
+                            <span>&lt;type-chat&gt;</span>
 
-                        <span>&lt;type-chat&gt;</span>
-                        <textarea name="text" rows="5" cols="33" spellcheck="false"><b>About me</b><br>
-Lorem ipsum dolor sit, amet elit.<br>
-Officia, sequi, cupiditate deleniti temporibus ratione.<br>
-Vitae saepe dolores numquam quas asperiores !<br>
-Expedita vel commodi eos magnam ?
-                        </textarea>
-                        <span>&lt;type-chat&gt;</span>
-                        <button type="button">Update</button>
-                    </fieldset>
+                            <button type="button">Test it</button>
+                        </fieldset>
 
-                    <fieldset id="field_chat">
-                        <legend>View the result :</legend>
-                        <type-chat></type-chat>
-                    </fieldset>
+                        <fieldset id="field_chat">
+                            <legend>View the result :</legend>
+                            <type-chat></type-chat>
+                        </fieldset>
+
+                    </div>
                 </details>
                 <script>
                     let button = document.querySelector("#TypeChat button")

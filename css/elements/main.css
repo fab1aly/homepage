@@ -1,0 +1,85 @@
+main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+
+    border: solid 1px darkgray;
+
+    margin: 2rem;
+    padding: 1rem;
+
+    display: flex;
+
+}
+
+/*********************************************************/
+#home {
+    /* display: none; */
+    position: absolute;
+    top: 3%;
+    right: 4%;
+
+    /* transform: scale(100%); */
+    /* animation-name: home-animation; */
+    /* animation-duration: 1s; */
+    /* animation-delay: 3s; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    & h1,
+    & p {
+        margin: 0;
+    }
+
+    & p {
+        text-align: right;
+        margin-right: .5rem;
+    }
+
+}
+
+/* @keyframes home-animation {
+    from {
+        top: 50%;
+        right: 20%;
+        transform: scale(150%);
+    }
+
+    to {
+        top: 5%;
+        right: 5%;
+        transform: scale(100%);
+    }
+} */
+
+/*********************************************************/
+
+#about,
+#project,
+#contact {
+    display: none;
+
+    height: 100%;
+    width: 100%;
+
+    animation-name: opacity-on;
+    animation-duration: 1s;
+
+    opacity: 1;
+}
+
+@keyframes opacity-on {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
