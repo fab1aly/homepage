@@ -85,10 +85,10 @@
                             <legend>Test this web component with your HTML text :</legend>
 
                             <span>&lt;type-chat&gt;</span>
-                            <textarea name="text" rows="5" spellcheck="false"><b>About this</b><br>
-This is my first web component.<br>
-I really like to make it and learn how use it.<br>
-It's fun, simple and create for the future of web developement !<br>
+                            <textarea name="text" rows="5" spellcheck="false"><h4>About this</h4>
+<p>This is my first <sup>web</sup>component.</p>
+I really like to <i>make</i> it and <i>learn</i> how use it.<br>
+It's <b>fun</b>, <b>simple</b> and <b>create</b> for the future of web developement !<br>
 Why you should not begin to use it ?</textarea>
                             <span>&lt;type-chat&gt;</span>
 
@@ -103,28 +103,20 @@ Why you should not begin to use it ?</textarea>
                     </div>
                 </details>
                 <script>
-                    let button = document.querySelector("#TypeChat button")
+                    const button = document.querySelector("#TypeChat button")
 
                     button.addEventListener('click', () => {
-                        // type_chat.innerHTML = text.textContent
-
-
                         let text = document.querySelector("#TypeChat textarea")
                         let type_chat = document.querySelector("#TypeChat type-chat")
                         let field_chat = document.querySelector("#TypeChat #field_chat")
 
-                        console.log(type_chat)
                         field_chat.removeChild(type_chat)
 
                         let new_chat = document.createElement("type-chat")
+
                         new_chat.innerHTML = text.value
-                        // console.log(new_chat)
                         field_chat.appendChild(new_chat)
-
-
                     })
-
-
                 </script>
             </section>
 
