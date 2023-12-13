@@ -1,5 +1,5 @@
-﻿# Fabien Aly Homepage
+﻿# Fabien Aly's Portfolio
 
-My portfolio ! :)
+This is my portfolio ! :)
 
-https://fab1aly.github.io/homepage/
+https://fab1aly.github.io/portfolio/
