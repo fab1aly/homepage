@@ -15,11 +15,6 @@ body {
     font-size: 1.6rem;
     background-color: black;
 
-    /* animation-name: opacity-on; */
-    animation-duration: 1s;
-    animation-delay: 2s;
-
-    opacity: 1;
 }
 
 header {
@@ -145,7 +140,7 @@ main {
 
 }
 
-@keyframes home-animation {
+/* @keyframes home-animation {
     from {
         top: 50%;
         right: 20%;
@@ -157,7 +152,7 @@ main {
         right: 5%;
         transform: scale(100%);
     }
-}
+} */
 
 /*********************************************************/
 
@@ -184,7 +179,7 @@ main {
         opacity: 1;
     }
 }
-
+/*********************************************************/
 #about {
     display: flex;
     flex-direction: column;
@@ -216,13 +211,13 @@ main {
     justify-content: flex-start;
     align-items: center;
 
-    h2 {
+    & h2 {
         margin: 0 auto;
         text-align: center;
 
     }
 
-    section {
+    & section {
         width: 99%;
         background-color: #111;
 
@@ -236,35 +231,48 @@ main {
         align-items: center;
     }
 
-    details {
+    & details {
         width: 99%;
     }
 
-    h3 {
+    & h3 {
         margin: 0;
         padding: 1rem;
 
-        a {
+        & a {
             font-size: 1.2rem;
             color: gray;
             transform: translateX(-1px);
         }
 
-        .fa-arrow-up-right-from-square {
+        & .fa-arrow-up-right-from-square {
             transform: scale(80%);
         }
     }
 
-    #enRoute h3::before{
-        content: "🇫🇷 ";
-        font-size: 1rem;
+    & #enRoute {
+
+        & h3::before {
+            content: "🇫🇷 ";
+            font-size: 1rem;
+        }
+
+        & div {
+
+            max-width: 45rem;
+            margin: 0 auto;
+
+            & iframe {
+                width: 99%;
+                height: 60vh;
+                transform: scale(95%);
+            }
+        }
     }
 
-    iframe {
-        transform: scale(95%);
-        width: 99%;
-        height: 60vh;
-    }
+
+
+
 
 }
 
