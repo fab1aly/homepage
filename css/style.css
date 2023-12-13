@@ -179,6 +179,7 @@ main {
         opacity: 1;
     }
 }
+
 /*********************************************************/
 #about {
     display: flex;
@@ -223,30 +224,37 @@ main {
 
         border: solid gray 1px;
         border-radius: 5px;
-        margin: 1rem 0;
+        margin: 1rem auto;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        & details {
+            width: 99%;
+        }
     }
 
-    & details {
-        width: 99%;
-    }
+
 
     & h3 {
         margin: 0;
         padding: 1rem;
 
         & a {
-            font-size: 1.2rem;
-            color: gray;
-            transform: translateX(-1px);
-        }
 
-        & .fa-arrow-up-right-from-square {
-            transform: scale(80%);
+            & span {
+                font-size: 1.2rem;
+                color: gray;
+
+            }
+
+            & i.fa-arrow-up-right-from-square {
+                transform: translateY(-5px);
+                font-size: 1rem;
+                color: gray;
+            }
         }
     }
 
@@ -270,8 +278,29 @@ main {
         }
     }
 
+    & #TypeChat {
 
+        & span {
+            display: block;
+            /* margin: .5rem 0; */
+        }
 
+        & fieldset {
+            border-radius: 5px;
+            margin: 1rem;
+
+            & legend {
+                padding: 0 .5rem;
+            }
+        }
+
+        & textarea {
+            resize: none;
+            background-color: black;
+            margin-left: 3rem;
+        }
+
+    }
 
 
 }

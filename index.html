@@ -57,18 +57,19 @@
             <h2>My Projects</h2>
 
             <section id="enRoute">
-                <details >
+                <details>
                     <summary>
-                        <h3>enRoute
+                        <h3>
+                            enRoute
                             <a href="https://www.enroute.ovh/" target="_blank">
-                                .ovh<i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>.ovh</span><i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </h3>
                     </summary>
                     <div>
                         <iframe src="https://www.enroute.ovh/"></iframe>
                     </div>
-                    
+
                     <p>This is my first project in <strong>PHP</strong>, <strong>JS</strong> vanilla and <strong>Sass</strong>.</p>
                 </details>
             </section>
@@ -79,8 +80,49 @@
                         <h3>TypeChat</h3>
                     </summary>
 
-                    <p>kldvlkdvfkl jdsflmsdmlsd lmfsd,mlfs .</p>
+                    <fieldset>
+                        <legend>Test this web component with your HTML text :</legend>
+
+                        <span>&lt;type-chat&gt;</span>
+                        <textarea name="text" rows="5" cols="33" spellcheck="false"><b>About me</b><br>
+Lorem ipsum dolor sit, amet elit.<br>
+Officia, sequi, cupiditate deleniti temporibus ratione.<br>
+Vitae saepe dolores numquam quas asperiores !<br>
+Expedita vel commodi eos magnam ?
+                        </textarea>
+                        <span>&lt;type-chat&gt;</span>
+                        <button type="button">Update</button>
+                    </fieldset>
+
+                    <fieldset id="field_chat">
+                        <legend>View the result :</legend>
+                        <type-chat></type-chat>
+                    </fieldset>
                 </details>
+                <script>
+                    let button = document.querySelector("#TypeChat button")
+
+                    button.addEventListener('click', () => {
+                        // type_chat.innerHTML = text.textContent
+
+
+                        let text = document.querySelector("#TypeChat textarea")
+                        let type_chat = document.querySelector("#TypeChat type-chat")
+                        let field_chat = document.querySelector("#TypeChat #field_chat")
+
+                        console.log(type_chat)
+                        field_chat.removeChild(type_chat)
+
+                        let new_chat = document.createElement("type-chat")
+                        new_chat.innerHTML = text.value
+                        // console.log(new_chat)
+                        field_chat.appendChild(new_chat)
+
+
+                    })
+
+
+                </script>
             </section>
 
         </article>
