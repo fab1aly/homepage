@@ -84,13 +84,17 @@
                         <fieldset>
                             <legend>Test this web component with your HTML text :</legend>
 
-                            <span>&lt;type-chat&gt;</span>
+                            <span>
+                                &lt;type-chat
+                                delay="<input id="delay" type="number" value="500" step="100" min="0" style="width: 5rem;background-color: black;">"
+                                tick="<input id="tick" type="number" value="4"  min="1" style="width: 3rem;background-color: black;">"&gt;
+                            </span>
                             <textarea name="text" rows="5" spellcheck="false"><h4>About this</h4>
 <p>This is my first <sup>web</sup>component.</p>
 I really like to <i>make</i> it and <i>learn</i> how use it.<br>
 It's <b>fun</b>, <b>simple</b> and <b>create</b> for the future of web developement !<br>
 Why you should not begin to use it ?</textarea>
-                            <span>&lt;type-chat&gt;</span>
+                            <span>&lt;/type-chat&gt;</span>
 
                             <button type="button">Test it</button>
                         </fieldset>
@@ -115,6 +119,14 @@ Why you should not begin to use it ?</textarea>
                         let new_chat = document.createElement("type-chat")
 
                         new_chat.innerHTML = text.value
+
+                        let delay_chat = document.querySelector("#TypeChat #delay")
+                        new_chat.setAttribute("delay", delay_chat.value)
+
+                        let tick_chat = document.querySelector("#TypeChat #tick")
+                        new_chat.setAttribute("tick", tick_chat.value)
+
+
                         field_chat.appendChild(new_chat)
                     })
                 </script>
