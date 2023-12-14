@@ -110,14 +110,13 @@ Why you should not begin to use it ?</textarea>
                     const button = document.querySelector("#TypeChat button")
 
                     button.addEventListener('click', () => {
-                        let text = document.querySelector("#TypeChat textarea")
-                        let type_chat = document.querySelector("#TypeChat type-chat")
+                        
+                        let old_chat = document.querySelector("#TypeChat type-chat")
                         let field_chat = document.querySelector("#TypeChat #field_chat")
-
-                        field_chat.removeChild(type_chat)
+                        field_chat.removeChild(old_chat)
 
                         let new_chat = document.createElement("type-chat")
-
+                        let text = document.querySelector("#TypeChat textarea")
                         new_chat.innerHTML = text.value
 
                         let delay_chat = document.querySelector("#TypeChat #delay")
@@ -125,7 +124,6 @@ Why you should not begin to use it ?</textarea>
 
                         let tick_chat = document.querySelector("#TypeChat #tick")
                         new_chat.setAttribute("tick", tick_chat.value)
-
 
                         field_chat.appendChild(new_chat)
                     })

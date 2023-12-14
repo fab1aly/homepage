@@ -5,21 +5,22 @@ export class TypeChat extends HTMLElement {
         super();
         // créer l'élément
 
-        this.delay = this.getAttribute('delay') || 1000;  // 1000ms par défaut
-        this.tick = this.getAttribute('tick') || 5; //?? maybe tick config ??   
+
     }
 
     connectedCallback() {
         // le navigateur appelle cette méthode lorsque l'élément est ajouté au document
         // elle peut-être appelé autant de fois que lélément est ajouté ou supprimé)
 
+        this.delay = this.getAttribute('delay') || 1000;  // 1000ms par défaut
+        this.tick = this.getAttribute('tick') || 5; //?? maybe tick config ?? 
+
         this.text = this.innerHTML;
-        // console.log(this.text);
         this.textContent = ``;
 
         const self = this;
         const text = this.text;
-        
+
         let index = 0;
         let frame = 0;
         let cache = "";
