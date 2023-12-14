@@ -72,3 +72,64 @@ header {
         }
     } */
 }
+
+footer {
+    font-size: 14px;
+    font-weight: bold;
+
+    & .copyleft {
+
+        position: absolute;
+        bottom: 0.5rem;
+        right: 2.5rem;
+
+        display: inline-block;
+        transform: rotate(180deg);
+
+        & .copyleft-logo {
+            display: inline-block;
+            transform: rotate(180deg) translateY(1px);
+        }
+    }
+
+    & .footer-social-link {
+        margin: 0;
+        padding: 0;
+
+        position: absolute;
+        bottom: 8.5rem;
+        right: -6.2rem;
+
+        display: flex;
+        transform: rotate(90deg);
+
+        & li {
+            margin-right: 1rem;
+        }
+
+        & .fa-brands {
+            margin-right: .1rem;
+        }
+
+        & .footer-linkedin:hover {
+            & .fa-linkedin {
+                color: dodgerblue;
+
+            }
+
+            & span {
+                color: lightgray;
+            }
+        }
+
+        & .footer-github:hover {
+            & .fa-square-github {
+                color: orange;
+            }
+
+            & span {
+                color: lightgray;
+            }
+        }
+    }
+}

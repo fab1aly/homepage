@@ -1,9 +1,8 @@
 @import "fonts/Atkinson-Hyperlegible.css";
 
-@import "elements/header.css";
-@import "elements/footer.css";
-
+@import "elements/header-footer.css";
 @import "elements/main.css";
+
 @import "elements/about-contact.css";
 @import "elements/project.css";
 
@@ -12,15 +11,19 @@
 }
 
 * {
-    list-style: none;
     text-decoration: none;
     font-family: Atkinson-Hyperlegible, sans-serif;
     color: darkgray;
+    list-style: none;
 }
+
+/* ul,
+ol {
+    list-style: none;
+} */
 
 body {
     font-size: 1.6rem;
     background-color: black;
 
 }
-
