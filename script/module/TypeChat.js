@@ -5,7 +5,6 @@ export class TypeChat extends HTMLElement {
         super();
         // créer l'élément
 
-
     }
 
     connectedCallback() {
