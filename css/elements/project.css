@@ -109,7 +109,6 @@ details[open]>*:not(summary) {
 
     & span {
         display: block;
-        /* margin: .5rem 0; */
     }
 
     & fieldset {
