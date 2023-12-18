@@ -93,13 +93,14 @@ details[open]>*:not(summary) {
 
     & div {
 
-        max-width: 45rem;
+        max-width: 40rem;
         margin: 0 auto;
+        padding: 0 1rem;
 
         & iframe {
             width: 99%;
-            height: 60vh;
-            transform: scale(95%);
+            height: 65vh;
+            /* transform: scale(95%); */
         }
     }
 }
