@@ -24,6 +24,7 @@ header {
 
         & li:hover {
             color: lightgray;
+            cursor: pointer;
         }
     }
 

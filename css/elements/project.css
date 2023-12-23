@@ -50,6 +50,10 @@
         }
     }
 
+    & summary {
+        cursor: pointer;
+    }
+
     & h3 {
         margin: 0;
         padding: 1rem;
