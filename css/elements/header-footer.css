@@ -1,5 +1,6 @@
 header {
     /* display: none; */
+    user-select: none;
 
     & nav {
 
@@ -22,10 +23,16 @@ header {
             transition: all 0.2s ease-in-out;
         }
 
-        & li:hover {
+        & li:hover:not(.selected) {
             color: lightgray;
             cursor: pointer;
         }
+
+        & li.selected {
+            user-select: none;
+        }
+
+
     }
 
     /* & nav {
@@ -75,11 +82,11 @@ header {
 }
 
 footer {
+    user-select: none;
     font-size: 14px;
     font-weight: bold;
 
     & .copyleft {
-
         position: absolute;
         bottom: 0.5rem;
         right: 2.5rem;

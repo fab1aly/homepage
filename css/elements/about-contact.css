@@ -1,11 +1,12 @@
 #about {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
 
     & h2 {
         margin: 0;
+        user-select: none;
 
     }
 
@@ -25,6 +26,7 @@
 
     & h2 {
         transform: translateX(-22px);
+        user-select: none;
     }
 
     & ul {
