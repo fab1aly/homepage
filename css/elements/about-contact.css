@@ -6,7 +6,7 @@
 
     & type-chat {
 
-        height: 20rem;
+        height: 18rem;
         width: 17rem;
 
         font-size: 1.4rem;
@@ -16,6 +16,10 @@
             margin: 0;
             /* margin-left: 4rem; */
             user-select: none;
+        }
+
+        & p {
+            margin-bottom: 0;
         }
 
     }
