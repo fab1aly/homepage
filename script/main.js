@@ -24,7 +24,7 @@ switch (hash) {
 function disableAbout() {
     const about_link = document.querySelector('.nav-about');
     about_link.textContent = "About";
-    about_link.classList.remove("selected")
+    about_link.classList.remove("selected");
 
     const about_article = document.querySelector('#about');
     about_article.style.display = "none";
@@ -53,13 +53,13 @@ function disableContact() {
 function displayAbout() {
     const about_link = document.querySelector('.nav-about');
     about_link.innerHTML = "&#x25CF;";
-    about_link.classList.add("selected")
+    about_link.classList.add("selected");
 
     const about_article = document.querySelector('#about');
     about_article.style.display = "flex";
 
-    disableProject()
-    disableContact()
+    disableProject();
+    disableContact();
 
     history.replaceState("null", "", "#about");
 }
@@ -67,13 +67,13 @@ function displayAbout() {
 function displayProject() {
     const project_link = document.querySelector('.nav-project');
     project_link.innerHTML = "&#x25CF;";
-    project_link.classList.add("selected")
+    project_link.classList.add("selected");
 
     const project_article = document.querySelector('#project');
     project_article.style.display = "flex";
 
-    disableAbout()
-    disableContact()
+    disableAbout();
+    disableContact();
 
     history.replaceState("null", "", "#project");
 }
@@ -81,13 +81,13 @@ function displayProject() {
 function displayContact() {
     const contact_link = document.querySelector('.nav-contact');
     contact_link.innerHTML = "&#x25CF;";
-    contact_link.classList.add("selected")
+    contact_link.classList.add("selected");
 
     const contact_article = document.querySelector('#contact');
     contact_article.style.display = "flex";
 
-    disableAbout()
-    disableProject()
+    disableAbout();
+    disableProject();
 
     history.replaceState("null", "", "#contact");
 }

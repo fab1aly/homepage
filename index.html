@@ -30,8 +30,8 @@
                 <li class="nav-project" onclick="displayProject()">Project</li>
                 <li class="nav-contact" onclick="displayContact()">Contact</li>
             </ul>
-
         </nav>
+        
     </header>
 
     <main>
@@ -39,14 +39,15 @@
         <article id="home">
             <h1>Fabien Aly</h1>
             <p>Web developer</p>
+            <p id="banner">Look for an Alternation</p>
         </article>
 
         <article id="about">
-            <type-chat delay="300" tick="4">
+            <type-chat delay="500" tick="3">
                 <h2>About me</h2>
-                From <i>Bordeaux</i> to the web, I sail through the tech world with curiosity.<br>
-                Proud to have obtained my web developer diploma with the <b>3W Academy</b>,<br>
-                I want to join a solid and agile team to increase my skills and discover <b>more</b>.<br>
+                <p>From <i>Bordeaux</i> to the web, I sail through the tech world with curiosity.<br>
+                    Proud to have obtained my web developer diploma with the <b>3W Academy</b>,<br>
+                    I want to join a solid and agile team to increase my skills and discover <b>more</b>.</p>
             </type-chat>
         </article>
 
@@ -87,7 +88,7 @@
                             <span>
                                 &lt;type-chat
                                 delay="<input id="delay" type="number" value="400" step="100" min="0" style="width: 5rem;background-color: black;">"
-                                tick="<input id="tick" type="number" value="4"  min="1" style="width: 3rem;background-color: black;">"&gt;
+                                tick="<input id="tick" type="number" value="4" min="1" style="width: 3rem;background-color: black;">"&gt;
                             </span>
                             <textarea name="text" rows="5" spellcheck="false"><h4>About this</h4>
 <p>This is my first <sup>web</sup>component.</p>
@@ -110,7 +111,7 @@ Why you should not begin to use it ?</textarea>
                     const button = document.querySelector("#TypeChat button")
 
                     button.addEventListener('click', () => {
-                        
+
                         let old_chat = document.querySelector("#TypeChat type-chat")
                         let field_chat = document.querySelector("#TypeChat #field_chat")
                         field_chat.removeChild(old_chat)

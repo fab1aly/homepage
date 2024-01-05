@@ -4,18 +4,23 @@
     justify-content: flex-end;
     align-items: flex-end;
 
-    & h2 {
-        margin: 0;
-        user-select: none;
-
-    }
-
     & type-chat {
+
+        height: 20rem;
         width: 17rem;
-        margin: 0;
-        text-align: right;
+
         font-size: 1.4rem;
+        text-align: right;
+
+        & h2 {
+            margin: 0;
+            /* margin-left: 4rem; */
+            user-select: none;
+        }
+
     }
+
+
 }
 
 #contact {

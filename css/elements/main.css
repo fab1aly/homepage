@@ -43,7 +43,21 @@ main {
         user-select: none;
     }
 
+    & #banner {
+        position: fixed;
+        top: 4.5rem;
+        right: -4rem;
+        transform: rotate(40deg);
+
+        width: 20rem;
+        background-color: green;
+        text-align: center;
+        margin: 0;
+    }
+
 }
+
+
 
 /* @keyframes home-animation {
     from {
