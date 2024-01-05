@@ -19,8 +19,8 @@ main {
 #home {
     /* display: none; */
     position: absolute;
-    top: 3%;
-    right: 4%;
+    top: 4rem;
+    right: 2rem;
 
     /* transform: scale(100%); */
     /* animation-name: home-animation; */
@@ -43,16 +43,25 @@ main {
         user-select: none;
     }
 
-    & #banner {
-        position: fixed;
-        top: 4.5rem;
-        right: -4rem;
-        transform: rotate(40deg);
-
-        width: 20rem;
+    & p.banner {
+        z-index: 10;
         background-color: green;
         text-align: center;
         margin: 0;
+        transform: rotate(40deg);
+        width: 20rem;
+    }
+
+    p#bannerUp {
+        position: fixed;
+        top: 4.5rem;
+        right: -4rem;
+    }
+
+    p#bannerDown {
+        position: fixed;
+        bottom: 4.5rem;
+        left: -4rem;
     }
 
 }
