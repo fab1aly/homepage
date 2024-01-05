@@ -121,6 +121,7 @@ details[open]>*:not(summary) {
 
         & legend {
             padding: 0 .5rem;
+            white-space: pre-line;
         }
     }
 
