@@ -105,24 +105,24 @@ Why you should not begin to use it ?</textarea>
                 </details>
                 <script>
                     const button = document.querySelector("#TypeChat button")
-
                     button.addEventListener('click', () => {
 
-                        let old_chat = document.querySelector("#TypeChat type-chat")
-                        let field_chat = document.querySelector("#TypeChat #field_chat")
-                        field_chat.removeChild(old_chat)
+                        const field_chat = document.querySelector("#TypeChat #field_chat");
 
-                        let new_chat = document.createElement("type-chat")
-                        let text = document.querySelector("#TypeChat textarea")
-                        new_chat.innerHTML = text.value
+                        const old_chat = document.querySelector("#TypeChat type-chat");
+                        field_chat.removeChild(old_chat);
 
-                        let delay_chat = document.querySelector("#TypeChat #delay")
-                        new_chat.setAttribute("delay", delay_chat.value)
+                        const new_chat = document.createElement("type-chat");
+                        const text = document.querySelector("#TypeChat textarea");
+                        new_chat.innerHTML = text.value;
 
-                        let tick_chat = document.querySelector("#TypeChat #tick")
-                        new_chat.setAttribute("tick", tick_chat.value)
+                        const delay_chat = document.querySelector("#TypeChat #delay");
+                        new_chat.setAttribute("delay", delay_chat.value);
 
-                        field_chat.appendChild(new_chat)
+                        const tick_chat = document.querySelector("#TypeChat #tick");
+                        new_chat.setAttribute("tick", tick_chat.value);
+
+                        field_chat.appendChild(new_chat);
                     })
                 </script>
             </section>
