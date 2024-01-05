@@ -14,17 +14,13 @@
 
         & h2 {
             margin: 0;
-            /* margin-left: 4rem; */
             user-select: none;
         }
 
         & p {
             margin-bottom: 0;
         }
-
     }
-
-
 }
 
 #contact {
