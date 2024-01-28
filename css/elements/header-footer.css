@@ -10,27 +10,29 @@ header {
         z-index: 10;
 
         font-weight: bold;
+        font-size: 1.8rem;
 
         & ul {
             margin: 0;
             padding: 0;
+
+            & li {
+                padding: .5rem 0;
+                transition: all 0.2s ease-in-out;
+            }
+
+            & li:hover:not(.selected) {
+                color: var(--light-text-color);
+                ;
+                cursor: pointer;
+            }
+
+            & li.selected {
+                user-select: none;
+            }
         }
 
-        & li {
-            padding: .5rem 0;
 
-            color: darkgray;
-            transition: all 0.2s ease-in-out;
-        }
-
-        & li:hover:not(.selected) {
-            color: lightgray;
-            cursor: pointer;
-        }
-
-        & li.selected {
-            user-select: none;
-        }
 
 
     }
@@ -86,7 +88,7 @@ footer {
     font-size: 14px;
     font-weight: bold;
 
-    & .copyleft {
+    & #footer-copyleft {
         position: absolute;
         bottom: 0.5rem;
         right: 2.5rem;
@@ -100,16 +102,16 @@ footer {
         }
     }
 
-    & .footer-social-link {
+    & #footer-social-link {
         margin: 0;
         padding: 0;
 
         position: absolute;
         bottom: 8.5rem;
         right: -6.2rem;
+        transform: rotate(90deg);
 
         display: flex;
-        transform: rotate(90deg);
 
         & li {
             margin-right: 1rem;
@@ -119,25 +121,38 @@ footer {
             margin-right: .1rem;
         }
 
-        & .footer-linkedin:hover {
+        & #footer-linkedin:hover {
             & .fa-linkedin {
                 color: dodgerblue;
-
             }
 
             & span {
-                color: lightgray;
+                color: var(--light-text-color);
             }
         }
 
-        & .footer-github:hover {
+        & #footer-github:hover {
             & .fa-square-github {
                 color: orange;
             }
 
             & span {
-                color: lightgray;
+                color: var(--light-text-color);
             }
         }
+    }
+
+    & #footer-darkMode {
+        position: absolute;
+        bottom: .5rem;
+        left: .4rem;
+        transform: rotate(180deg);
+    }
+
+    & #footer-lightMode {
+        position: absolute;
+        bottom: 2.4rem;
+        left: -1.5rem;
+        transform: rotate(-90deg);
     }
 }

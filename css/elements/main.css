@@ -6,7 +6,7 @@ main {
     right: 0;
 
 
-    border: solid 1px darkgray;
+    border: solid 1px var(--main-text-color);
 
     margin: 2rem;
     padding: 1rem;

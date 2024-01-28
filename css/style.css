@@ -11,14 +11,32 @@
 }
 
 * {
-    text-decoration: none;
+    color: var(--main-text-color);
     font-family: Atkinson-Hyperlegible, sans-serif;
-    color: darkgray;
+    text-decoration: none;
     list-style: none;
 }
 
 body {
     font-size: 1.6rem;
-    background-color: black;
+    background-color: var(--main-bg-color);
+    transition: all 0.3s ease-in-out;
+}
 
+.dark-mode {
+    --main-bg-color: black;
+    --light-bg-color: #111;
+
+    --dark-text-color: gray;
+    --main-text-color: darkgray;
+    --light-text-color: lightgray;
+}
+
+.light-mode {
+    --main-bg-color: darkgray;
+    --light-bg-color: lightgray;
+
+    --dark-text-color: #000;
+    --main-text-color: #222;
+    --light-text-color: #444;
 }
