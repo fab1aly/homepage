@@ -3,9 +3,8 @@
 // Theme Mode
 function darkMode() {
     const body = document.body;
-    body.classList.remove("light-mode");
     body.classList.add("dark-mode");
-
+    body.classList.remove("light-mode");
     body.classList.remove("green-mode");
 
     const dark_element = document.querySelector("#footer-darkMode");
@@ -13,12 +12,14 @@ function darkMode() {
 
     const light_element = document.querySelector("#footer-lightMode");
     light_element.hidden = false;
+
+    const green_element = document.querySelector("#footer-greenMode");
+    green_element.hidden = true;
 }
 function lightMode() {
     const body = document.body;
     body.classList.remove("dark-mode");
     body.classList.add("light-mode");
-
     body.classList.remove("green-mode");
 
     const dark_element = document.querySelector("#footer-darkMode");
@@ -26,6 +27,9 @@ function lightMode() {
 
     const light_element = document.querySelector("#footer-lightMode");
     light_element.hidden = true;
+
+    const green_element = document.querySelector("#footer-greenMode");
+    green_element.hidden = true;
 }
 function greenMode() {
     const body = document.body;
@@ -35,6 +39,7 @@ function greenMode() {
 
     const dark_element = document.querySelector("#footer-darkMode");
     dark_element.hidden = true;
+
     const light_element = document.querySelector("#footer-lightMode");
     light_element.hidden = true;
 
@@ -56,6 +61,8 @@ if (window.matchMedia) {
     // Default (when Media-Queries are not supported)
     greenMode()
 }
+
+
 /******************************************************************/
 
 // Disable Article Function
