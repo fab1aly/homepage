@@ -114,6 +114,7 @@ details[open]>*:not(summary) {
     & fieldset {
         min-width: 10rem;
         border-radius: 5px;
+        border-color: var(--dark-text-color);
         margin: 1rem;
 
         display: flex;
@@ -126,6 +127,8 @@ details[open]>*:not(summary) {
         & #delay,
         #tick {
             background-color: var(--main-bg-color);
+            border-color: var(--dark-text-color);
+            border-radius: 5px;
         }
 
         & #delay {
@@ -145,12 +148,15 @@ details[open]>*:not(summary) {
     & textarea {
         resize: none;
         background-color: var(--main-bg-color);
+        border-color: var(--dark-text-color);
         border-radius: 5px;
+        margin: .5rem 0;
         margin-left: 3rem;
     }
 
     & button {
         background-color: var(--main-bg-color);
+        border-color: var(--dark-text-color);
         border-radius: 4px;
         margin-right: 1rem;
         align-self: flex-end;

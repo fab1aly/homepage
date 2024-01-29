@@ -155,4 +155,11 @@ footer {
         left: -1.5rem;
         transform: rotate(-90deg);
     }
+
+    & #footer-greenMode {
+        position: absolute;
+        top: 2.6rem;
+        left: -1.9rem;
+        transform: rotate(-90deg);
+    }
 }

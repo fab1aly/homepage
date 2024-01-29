@@ -45,7 +45,8 @@ main {
 
     & p.banner {
         z-index: 10;
-        background-color: green;
+        background-color: var(--banner-bg-color);
+        color: var(--banner-text-color);
         text-align: center;
         margin: 0;
         transform: rotate(40deg);

@@ -4,29 +4,57 @@
 function darkMode() {
     const body = document.body;
     body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+
     body.classList.remove("green-mode");
 
     const dark_element = document.querySelector("#footer-darkMode");
-    dark_element.style.display = "none";
+    dark_element.hidden = true;
 
     const light_element = document.querySelector("#footer-lightMode");
-    light_element.style.display = "block";
+    light_element.hidden = false;
 }
 function lightMode() {
     const body = document.body;
-    body.classList.remove("green-mode");
+    body.classList.remove("dark-mode");
     body.classList.add("light-mode");
 
+    body.classList.remove("green-mode");
+
     const dark_element = document.querySelector("#footer-darkMode");
-    dark_element.style.display = "block";
+    dark_element.hidden = false;
 
     const light_element = document.querySelector("#footer-lightMode");
-    light_element.style.display = "none";
+    light_element.hidden = true;
 }
 function greenMode() {
     const body = document.body;
-    body.classList.remove("green-mode");
+    body.classList.remove("dark-mode");
+    body.classList.remove("light-mode");
     body.classList.add("green-mode");
+
+    const dark_element = document.querySelector("#footer-darkMode");
+    dark_element.hidden = true;
+    const light_element = document.querySelector("#footer-lightMode");
+    light_element.hidden = true;
+
+    const green_element = document.querySelector("#footer-greenMode");
+    green_element.hidden = false;
+}
+
+// Check to see if Media-Queries are supported
+if (window.matchMedia) {
+    // Check if the dark-mode Media-Query matches
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // Dark
+        darkMode()
+    } else {
+        // Light
+        lightMode()
+    }
+} else {
+    // Default (when Media-Queries are not supported)
+    greenMode()
 }
 
 // Circle Element for Nav link
