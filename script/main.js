@@ -56,11 +56,9 @@ if (window.matchMedia) {
     // Default (when Media-Queries are not supported)
     greenMode()
 }
-
-// Circle Element for Nav link
-const circle_element = '<span style="font-size: 1.4rem;">&#x25CF;</span>'
-
 /******************************************************************/
+
+// Disable Article Function
 function disableAbout() {
     const about_link = document.querySelector('#nav-about');
     about_link.textContent = "About";
@@ -85,7 +83,11 @@ function disableContact() {
     const contact_article = document.querySelector('#contact');
     contact_article.style.display = "none";
 }
-/******************************************************************/
+
+// Circle Element for Nav link
+const circle_element = '<span style="font-size: 1.4rem;">&#x25CF;</span>'
+
+// Nav Function
 function displayAbout() {
     const about_link = document.querySelector('#nav-about');
     about_link.innerHTML = circle_element;
