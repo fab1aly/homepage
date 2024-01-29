@@ -47,6 +47,32 @@ function greenMode() {
     green_element.hidden = false;
 }
 
+let count = 0;
+function enableGreenMode() {
+
+    setTimeout(() => {
+        count = 0
+    }, 5000)
+
+    count++
+
+    if (count == 5) {
+        greenMode()
+    }
+}
+
+function disableGreenMode() {
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // Dark
+        darkMode()
+    } else {
+        // Light
+        lightMode()
+    }   
+
+}
+
 // Check to see if Media-Queries are supported
 if (window.matchMedia) {
     // Check if the dark-mode Media-Query matches
