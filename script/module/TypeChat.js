@@ -14,10 +14,7 @@ export class TypeChat extends HTMLElement {
         this.mode = this.getAttribute('mode') || "word"; //?? maybe tick config ?? 
         this.delay = this.getAttribute('delay') || 1000;  // 1000ms par défaut
         this.tick = this.getAttribute('tick') || 5; // tick => how many frame by tick
-        if (this.tick < 1) {
-            this.tick = 1;
-        }
-
+        if (this.tick < 1) this.tick = 1;
 
         this.text = this.innerHTML;
         this.textContent = ``;
