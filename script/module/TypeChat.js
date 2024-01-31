@@ -11,9 +11,13 @@ export class TypeChat extends HTMLElement {
         // le navigateur appelle cette méthode lorsque l'élément est ajouté au document
         // elle peut-être appelé autant de fois que lélément est ajouté ou supprimé)
 
-        this.delay = this.getAttribute('delay') || 1000;  // 1000ms par défaut
-        this.tick = this.getAttribute('tick') || 5; // tick config
         this.mode = this.getAttribute('mode') || "word"; //?? maybe tick config ?? 
+        this.delay = this.getAttribute('delay') || 1000;  // 1000ms par défaut
+        this.tick = this.getAttribute('tick') || 5; // tick => how many frame by tick
+        if (this.tick < 1) {
+            this.tick = 1;
+        }
+
 
         this.text = this.innerHTML;
         this.textContent = ``;
@@ -65,9 +69,9 @@ export class TypeChat extends HTMLElement {
         //             cache += text[index++];
 
 
-                    
+
         //             if (text[index] == " ") {
-                        
+
         //                 if (in_word == true) {
         //                     in_word = false;
 
@@ -76,7 +80,7 @@ export class TypeChat extends HTMLElement {
         //                     in_word = true;
         //                 }
 
-                        
+
         //             }
 
 
