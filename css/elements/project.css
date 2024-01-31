@@ -18,7 +18,7 @@
 
     section {
         width: 99%;
-        max-width: 69rem;
+        max-width: 75rem;
         background-color: var(--light-bg-color);
 
         border: solid 1px var(--dark-text-color);
