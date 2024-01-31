@@ -160,6 +160,7 @@ function displayContact() {
 
     history.replaceState("null", "", "#contact");
 }
+
 /******************************************************************/
 
 // Hash in URL
@@ -180,4 +181,24 @@ switch (hash) {
         displayAbout();
         break;
 }
+
 /******************************************************************/
+
+// one Project display
+
+const details = document.querySelectorAll("details");
+// Add the onclick listeners.
+details.forEach((detail) => {
+  detail.addEventListener("toggle", () => {
+    if (detail.open) setTargetDetail(detail);
+  });
+});
+
+// Close all the details that are not targetDetail.
+function setTargetDetail(targetDetail) {
+  details.forEach((detail) => {
+    if (detail !== targetDetail) {
+      detail.open = false;
+    }
+  });
+}

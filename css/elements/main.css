@@ -5,7 +5,6 @@ main {
     left: 0;
     right: 0;
 
-
     border: solid 1px var(--main-text-color);
 
     margin: 2rem;
@@ -16,7 +15,7 @@ main {
 }
 
 /*********************************************************/
-#home {
+#title {
     /* display: none; */
     position: absolute;
     top: 4rem;
@@ -32,18 +31,18 @@ main {
     justify-content: flex-end;
     align-items: flex-end;
 
-    & h1,
-    & p {
+    h1,
+    p {
         margin: 0;
     }
 
-    & p {
+    p {
         text-align: right;
         margin-right: .5rem;
         user-select: none;
     }
 
-    & p.banner {
+    p.banner {
         z-index: 10;
         background-color: var(--banner-bg-color);
         color: var(--banner-text-color);
@@ -89,9 +88,6 @@ main {
 #project,
 #contact {
     display: none;
-
-    height: 100%;
-    width: 100%;
 
     animation-name: opacity-on;
     animation-duration: 1s;

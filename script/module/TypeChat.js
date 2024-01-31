@@ -12,7 +12,8 @@ export class TypeChat extends HTMLElement {
         // elle peut-être appelé autant de fois que lélément est ajouté ou supprimé)
 
         this.delay = this.getAttribute('delay') || 1000;  // 1000ms par défaut
-        this.tick = this.getAttribute('tick') || 5; //?? maybe tick config ?? 
+        this.tick = this.getAttribute('tick') || 5; // tick config
+        this.mode = this.getAttribute('mode') || "word"; //?? maybe tick config ?? 
 
         this.text = this.innerHTML;
         this.textContent = ``;
@@ -24,13 +25,18 @@ export class TypeChat extends HTMLElement {
         let frame = 0;
         let cache = "";
         let out_of_bracket = true;
+        let in_word = true;
 
         function typeLetter() {
             if (index < text.length) {
                 frame++;
 
                 if (frame % self.tick == 0) {
+
+
                     cache += text[index++];
+
+
 
                     if (text[index] == "<") {
                         out_of_bracket = false;
@@ -46,6 +52,48 @@ export class TypeChat extends HTMLElement {
                 requestAnimationFrame(typeLetter);// Utilise requestAnimationFrame pour la prochaine lettre
             }
         }
+
+
+        // don't work !!!
+
+        // function typeWord() {
+        //     if (index < text.length) {
+        //         frame++;
+
+        //         if (frame % self.tick == 0) {
+
+        //             cache += text[index++];
+
+
+                    
+        //             if (text[index] == " ") {
+                        
+        //                 if (in_word == true) {
+        //                     in_word = false;
+
+        //                 }
+        //                 else {
+        //                     in_word = true;
+        //                 }
+
+                        
+        //             }
+
+
+        //             if (text[index] == "<") {
+        //                 out_of_bracket = false;
+        //             }
+        //             if (text[index] == ">") {
+        //                 out_of_bracket = true;
+        //             }
+        //             if (out_of_bracket && in_word === false) {
+        //                 self.innerHTML = cache;
+        //             }
+
+        //         }
+        //         requestAnimationFrame(typeWord);// Utilise requestAnimationFrame pour la prochaine lettre
+        //     }
+        // }
 
         // Commence l'effet de frappe après un délai initial
         setTimeout(() => requestAnimationFrame(typeLetter), this.delay);

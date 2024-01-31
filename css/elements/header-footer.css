@@ -1,94 +1,41 @@
 header {
-    /* display: none; */
     user-select: none;
+    font-weight: bold;
+    font-size: var(--header-text-size);
 
-    & nav {
-
+    nav {
         position: absolute;
         top: 4rem;
         left: 5rem;
         z-index: 10;
 
-        font-weight: bold;
-        font-size: 1.8rem;
-
-        & ul {
+        ul {
             margin: 0;
             padding: 0;
 
-            & li {
+            li {
                 padding: .5rem 0;
                 transition: all 0.2s ease-in-out;
             }
 
-            & li:hover:not(.selected) {
+            li:hover:not(.selected) {
                 color: var(--light-text-color);
-                ;
                 cursor: pointer;
             }
 
-            & li.selected {
+            li.selected {
                 user-select: none;
             }
         }
-
-
-
-
     }
-
-    /* & nav {
-        margin: 25px;
-        background: #f9f9f9;
-        padding: 16px;
-
-        & .menuItems {
-            list-style: none;
-            display: flex;
-
-            & li {
-                margin: 50px;
-
-                & a {
-                    text-decoration: none;
-                    color: #8f8f8f;
-                    font-size: 24px;
-                    font-weight: 400;
-                    transition: all 0.5s ease-in-out;
-                    position: relative;
-                    text-transform: uppercase;
-
-                    &::before {
-                        content: attr(data-item);
-                        transition: 0.5s;
-                        color: #8254ff;
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        width: 0;
-                        overflow: hidden;
-                    }
-
-                    &:hover {
-                        &::before {
-                            width: 100%;
-                            transition: all 0.5s ease-in-out;
-                        }
-                    }
-                }
-            }
-        }
-    } */
 }
 
 footer {
     user-select: none;
-    font-size: 14px;
+    font-size: var(--footer-text-size);
     font-weight: bold;
 
-    & #footer-copyleft {
+    #footer-copyleft {
         position: absolute;
         bottom: 0.5rem;
         right: 2.5rem;
@@ -96,13 +43,13 @@ footer {
         display: inline-block;
         transform: rotate(180deg);
 
-        & .copyleft-logo {
+        .copyleft-logo {
             display: inline-block;
             transform: rotate(180deg) translateY(1px);
         }
     }
 
-    & #footer-social-link {
+    #footer-social-link {
         margin: 0;
         padding: 0;
 
@@ -113,53 +60,53 @@ footer {
 
         display: flex;
 
-        & li {
+        li {
             margin-right: 1rem;
         }
 
-        & .fa-brands {
+        .fa-brands {
             margin-right: .1rem;
         }
 
-        & #footer-linkedin:hover {
-            & .fa-linkedin {
+        #footer-linkedin:hover {
+            .fa-linkedin {
                 color: dodgerblue;
             }
 
-            & span {
+            span {
                 color: var(--light-text-color);
             }
         }
 
-        & #footer-github:hover {
-            & .fa-square-github {
+        #footer-github:hover {
+            .fa-square-github {
                 color: orange;
             }
 
-            & span {
+            span {
                 color: var(--light-text-color);
             }
         }
     }
 
-    & #footer-darkMode {
+    #footer-darkMode {
         position: absolute;
         bottom: .5rem;
         left: .4rem;
         transform: rotate(180deg);
     }
 
-    & #footer-lightMode {
+    #footer-lightMode {
         position: absolute;
         bottom: 2.4rem;
         left: -1.5rem;
         transform: rotate(-90deg);
     }
 
-    & #footer-greenMode {
+    #footer-greenMode {
         position: absolute;
         top: 2.6rem;
-        left: -1.9rem;
+        left: -1.7rem;
         transform: rotate(-90deg);
     }
 }
