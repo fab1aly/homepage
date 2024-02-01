@@ -105,8 +105,8 @@ footer {
 
     #footer-greenMode {
         position: absolute;
-        top: 2.6rem;
-        left: -1.7rem;
+        top: 3.8rem;
+        left: -3.1rem;
         transform: rotate(-90deg);
     }
 }
