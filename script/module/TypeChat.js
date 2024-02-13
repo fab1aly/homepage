@@ -58,6 +58,8 @@ export class TypeChat extends HTMLElement {
         // don't work !!!
 
         // function typeWord() {
+
+        //  text.map(word => )
         //     if (index < text.length) {
         //         frame++;
 
