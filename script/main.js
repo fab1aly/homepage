@@ -132,7 +132,7 @@ function displayAbout() {
     disableProject();
     disableContact();
 
-    history.replaceState("null", "", "#about");
+    history.pushState("null", "", "#about");
 }
 function displayProject() {
     const project_link = document.querySelector('#nav-project');
@@ -145,7 +145,7 @@ function displayProject() {
     disableAbout();
     disableContact();
 
-    history.replaceState("null", "", "#project");
+    history.pushState("null", "", "#project");
 }
 function displayContact() {
     const contact_link = document.querySelector('#nav-contact');
@@ -158,7 +158,7 @@ function displayContact() {
     disableAbout();
     disableProject();
 
-    history.replaceState("null", "", "#contact");
+    history.pushState("null", "", "#contact");
 }
 
 /******************************************************************/
